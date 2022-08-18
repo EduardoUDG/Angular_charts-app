@@ -22,7 +22,7 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
   imports: [
     CommonModule,
     GraphsRoutingModule,
-    NgChartsModule
+    NgChartsModule,
   ]
 })
 export class GraphsModule { }
