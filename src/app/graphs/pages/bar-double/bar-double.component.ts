@@ -7,6 +7,7 @@ import { ChartData } from 'chart.js';
 })
 export class BarDoubleComponent {
 
+  // Bar chart
   myBarChartData: ChartData<'bar'> = {
     labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027'],
     datasets: [
