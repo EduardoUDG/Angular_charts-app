@@ -42,11 +42,9 @@ export class DonaHttpComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
-    this._chartService.getUsersSocialMedia()
-      .subscribe( resp => {
-        const labels = Object.keys( resp );
-        const values = Object.values( resp );
 
+    this._chartService.getUsersSocialMediaDataDoughnut()
+      .subscribe( ({ values, labels }) => {
         this.doughnutChartData = {
           labels: labels,
           datasets: [
@@ -61,6 +59,26 @@ export class DonaHttpComponent implements OnInit{
           ]
         }
       });
+
+    // this._chartService.getUsersSocialMedia()
+    //   .subscribe( resp => {
+    //     const labels = Object.keys( resp );
+    //     const values = Object.values( resp );
+
+    //     this.doughnutChartData = {
+    //       labels: labels,
+    //       datasets: [
+    //         {
+    //           data: values,
+    //           backgroundColor: [
+    //             '#0075ED',
+    //             '#00BAF7',
+    //             '#00E0DB'
+    //           ]
+    //         }
+    //       ]
+    //     }
+    //   });
   }
 
 }
